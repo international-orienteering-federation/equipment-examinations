@@ -53,7 +53,7 @@ A sets of measurements of the same measurand involves a component of random erro
 
 Some examples:
 
-![Examples of measurements results](./attachments/precision-accuracy.png "Precision and accuracy")
+![Examples of measurements results](./attachments/precision-accuracy.jpeg "Precision and accuracy")
 
 - a) high precision and high accuracy
 - b) high precision and low accuracy
