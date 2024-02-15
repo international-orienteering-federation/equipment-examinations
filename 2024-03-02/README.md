@@ -70,11 +70,11 @@ Mathematically we consider:
 In sport timing measurement:
 
 - Low accuracy (a big systematic error) means that the measurement line is different from the intended one but is the same for all competitors.
-- Low precision means that the measurement line is moved during the race and the time is taken at a different position for each competitor.
+- Low precision (a big random error) means that the measurement line is moved during the race and the time is taken at a different position for each competitor.
 
 Every orienteering competition has a different course and there's no "world record" concept for a particular course/distance. Before the first arrival, the position of the finish line can be moved by a few centimeters and nobody cares. This means that we can accept a low accuracy, according to the previous definition.
 
-On the other hand, for a fair result, the finish line position must be the same for all competitors.
+On the other hand, for a fair result, the finish line position must be the same for all competitors. We need an high precision.
 
 In orienteering we define a **reliable timing system** as one that is capable of providing an high precision, regardless of the accuracy.
 
@@ -84,11 +84,11 @@ Accuracy is taken into account when we have to mix measurements taken from diffe
 
 According to the [Sportident documentation](https://docs.sportident.com/user-guide/en/airplus_system.html#_beacon_mode):
 
-> In orienteering, **Punching mode** is recommended for all controls. The SIAC registers the time and station’s code number when it enters the station’s active field. The SIAC’s feedback signals stay active while the SIAC stays in the station’s active area.
+> In orienteering, **Punching mode** is recommended for all controls. The SIAC registers the time and station's code number when it enters the station's active field. The SIAC's feedback signals stay active while the SIAC stays in the station's active area.
 >
 > In **Timing mode**, the punching time of the SIAC will be recorded at the maximal field strength. This method enables exact timing at START, FINISH (for any sport) or at every CONTROL point (for sports with different stages for example MTB Enduro). SIAC only provides a feedback after the athlete with the SIAC has left the field with a short flash and beep.
 > 
-> Because of the SIAC’s late feedback in timing mode we recommend using an AIR+ Signal Indicator for testing purposes.
+> Because of the SIAC's late feedback in timing mode we recommend using an AIR+ Signal Indicator for testing purposes.
 
 Timing mode should guarantee an higher accuracy, however some organizers prefer the punching mode (at finish) to get the trigger ASAP and reduce the latency (for TV graphic). Is not clear how using a different mode affect the precision.
 
