@@ -20,15 +20,18 @@ Thanks for the equipment and the support to [FICr Vicenza](https://www.cronovice
     - [Sportident punching and timing mode](#sportident-punching-and-timing-mode)
   - [Hardware](#hardware)
     - [Sportident BS11-BL modified for the start gate](#sportident-bs11-bl-modified-for-the-start-gate)
+    - [Resolution](#resolution)
   - [Software](#software)
   - [Protocol](#protocol)
     - [0 - Setup](#0---setup)
+      - [Clock drift](#clock-drift)
     - [1 - Data acquisition](#1---data-acquisition)
     - [2 - Data acquisition](#2---data-acquisition)
     - [3 - Data acquisition](#3---data-acquisition)
     - [4 - Data acquisition](#4---data-acquisition)
     - [5 - Elaboration](#5---elaboration)
     - [6 - Elaboration](#6---elaboration)
+    - [7 - Elaboration](#7---elaboration)
   - [Conclusion](#conclusion)
 
 
@@ -131,6 +134,12 @@ Without the antenna the BS11-BL cannot send any signal to the SIAC. As soon the 
 ![](./attachments/IMG_5224.jpg)
 ![](./attachments/IMG_5226.jpg)
 
+### Resolution
+
+- Sportident times are saved at 1/256 of second.
+- Photocell times are saved at 1/100 of second.
+- Photofinish times are saved at 1/1000 of second.
+
 ## Software
 
 - Microgate
@@ -138,9 +147,11 @@ Without the antenna the BS11-BL cannot send any signal to the SIAC. As soon the 
   - configuration: // TODO
 - Finish Lynx
   - version: // TODO
-- jSh Radio gateway
+- jSh Radio controller
   - version: 1.75 (2023-10-14)
   - on: Windows 11 x64 // TODO
+- Sportident Config+ 
+  - version: 2.11.0
 
 ## Protocol
 
@@ -150,11 +161,18 @@ Collect all the serial numbers and software version information to fill the abov
 
 The BS11-LA and BS11-BL are left in charge for at least 8 hours the night before the test.
 
-All the SIACs are cleared once.
+#### Clock drift
 
-The box of the BS11-LA must be protected from the direct sunlight could produce heat.
+Any clock suffers of a drift because they don't run exactly at the same clock they are supposed to run. Is not the goal of this test to measure the drift of the clocks used. 
 
-The BS11-LA time is synchronized with a laptop just before the data acquisition. The laptop time must be synchronized via NTP and [time.is](https://time.is) should show a difference lower than 0.1s. The laptop must be connected to the power during the synchronizations.
+To reduce the possibility of a clock drift these the following actions will be taken in consideration:
+
+- Before and after the test the clocks difference must be noted down.
+  - **Output**: 0-clocks-comparison.csv
+- The BS11-LA time is synchronized with a laptop just before the data acquisition. The laptop time must be synchronized via NTP and [time.is](https://time.is) should show a difference lower than 0.1s. The laptop must be connected to the power during the synchronizations.
+- All the data acquisition must be completed within few hours
+- The Microgate time is synchronized with GPS just before the test
+- All the equipment must be protected from the direct sunlight could produce heat.
 
 ### 1 - Data acquisition
 
@@ -177,12 +195,19 @@ The setup has (mounted on the same line):
 
 The two photocells are connected with a logical AND to the chronometer.
 
-Before each passage the SIAC are cleared and turned on with a SIAC ON station.
+Before each passage the SIAC are cleared and turned on with a SIAC ON station. After each passage the SIAC are read with the USB station.
 
-The jSh Radio gateway is connected to two SRR USB dongle to receive the Sportident time and via serial cable to the chronometer to receive the photocell time. Everything is saved into a csv file. The computer time is saved, in order to know the latency.
+The Microgate chronometers collect the photocell times internally.
 
 - **Output**: 2-photocell-times.csv
+
+Two instances of the jSh Radio controller are connected to two SRR USB dongle to receive the Sportident times. Everything is saved into a csv file. The computer time is saved, in order to know the latency of the SRR protocol.
+
 - **Output**: 2-sportident-times.csv
+
+Sportident Config+ reads the stations to collect the internal memory. There is the possibility the SRR transmitted times and the times read from the SIAC memory are different.
+
+- **Output**: 2-sportident-readouts.csv
 
 For each passage, the photofinish (working independently) provides two times: looking the position of the chest (id: progressive number of the passage) and the position of the SIAC (id: progressive number multiplied by 1000). 
 
@@ -194,6 +219,7 @@ Repeat the previous data acquisition, with BS11-LA in punching mode.
 
 - **Output**: 3-photocell-times.csv
 - **Output**: 3-sportident-times.csv
+- **Output**: 3-sportident-readouts.csv
 - **Output**: 3-photofinish-times.csv
 
 ### 4 - Data acquisition
@@ -205,12 +231,41 @@ The setup has:
 - Chronometer connected at channel 1
 - BS11-BL (punching mode) with send last punch connected to the start gate at channel 2 
 
-The jSh Radio gateway is connected to two SRR dongle to receive the Sportident time and via serial cable to the chronometer to receive the chronometer time. Everything is saved into a csv file. The computer time is saved, in order to know the latency.
+The jSh Radio gateway and the Sportident Config+ read the times and in the previous acquisition.
 
 - **Output**: 4-chronometer-times.csv
 - **Output**: 4-sportident-times.csv
+- **Output**: 4-sportident-readouts.csv
 
 ### 5 - Elaboration 
+
+Compare the Sportident times received from the SRR protocol and the times read from the SIAC memory. Merge the SRR times collected by the blue and the red channels
+
+Expectations:
+
+- [ ] All the times must be equal
+- [ ] No times lost
+- [ ] The majority of the times have been received only on one channel
+
+Calculate the latency between the Sportident times and the laptop internal times:
+
+```
+latency = sportident time - laptop time
+```
+
+The average of the latency could give an indication about the time we have to wait before to display the time into the TV graphic. Note that the latency measured is related to the first step (from the SIAC to the computer). The latter passages will add more delay.
+
+Expectations:
+
+- [ ] The average latency is less than 100ms
+
+Questions:
+
+- [ ] What is the average latency?
+- [ ] What is the difference in latency between timing and punching mode?
+
+
+### 6 - Elaboration 
 
 The photofinish time is used as the real expected value.
 
@@ -260,7 +315,7 @@ Questions:
 - [ ] Can the IOF timing requirements be improved?
 
 
-### 6 - Elaboration 
+### 7 - Elaboration 
 
 To elaborate the start gate time we use the chronometer time as the real expected value.
 
