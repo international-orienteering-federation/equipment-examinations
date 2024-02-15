@@ -84,9 +84,9 @@ Accuracy is taken into account when we have to mix measurements taken from diffe
 
 According to the [Sportident documentation](https://docs.sportident.com/user-guide/en/airplus_system.html#_beacon_mode):
 
-> In orienteering, Punching mode is recommended for all controls. The SIAC registers the time and station’s code number when it enters the station’s active field. The SIAC’s feedback signals stay active while the SIAC stays in the station’s active area.
+> In orienteering, **Punching mode** is recommended for all controls. The SIAC registers the time and station’s code number when it enters the station’s active field. The SIAC’s feedback signals stay active while the SIAC stays in the station’s active area.
 >
-> In Timing mode, the punching time of the SIAC will be recorded at the maximal field strength. This method enables exact timing at START, FINISH (for any sport) or at every CONTROL point (for sports with different stages for example MTB Enduro). SIAC only provides a feedback after the athlete with the SIAC has left the field with a short flash and beep.
+> In **Timing mode**, the punching time of the SIAC will be recorded at the maximal field strength. This method enables exact timing at START, FINISH (for any sport) or at every CONTROL point (for sports with different stages for example MTB Enduro). SIAC only provides a feedback after the athlete with the SIAC has left the field with a short flash and beep.
 > 
 > Because of the SIAC’s late feedback in timing mode we recommend using an AIR+ Signal Indicator for testing purposes.
 
@@ -125,11 +125,11 @@ This is an aftermarket modification of a BS11-BL station.
 
 The antenna is disconnected and a switch and banana-type socket are added. The start gate is connected using the banana plug and when the gate is open the circuit closes and the antenna connects. The switch allows the gate to be bypassed to keep the circuit closed and the antenna connected (restoring the basic operation of the BS11-BL).
 
+Without the antenna the BS11-BL cannot send any signal to the SIAC. As soon the antenna connects, a signal with the current time reach the SIAC. The SIAC store the time and re-send the punch via the SRR protocol (the BS11-BL is configured as "send last punch").
+
 ![](./attachments/IMG_5223.jpg)
 ![](./attachments/IMG_5224.jpg)
 ![](./attachments/IMG_5226.jpg)
-
-Without the antenna the BS11-BL cannot send any signal to the SIAC. As soon the antenna connects, a signal with the current time reach the SIAC. The SIAC store the time and re-send the punch via the SRR protocol (the BS11-BL is configured as "send last punch").
 
 ## Software
 
@@ -154,6 +154,8 @@ All the SIACs are cleared once.
 
 The box of the BS11-LA must be protected from the direct sunlight could produce heat.
 
+The BS11-LA time is synchronized with a laptop just before the data acquisition. The laptop time must be synchronized via NTP and [time.is](https://time.is) should show a difference lower than 0.1s. The laptop must be connected to the power during the synchronizations.
+
 ### 1 - Data acquisition
 
 The BS11 stations are read to collect the internal info.
@@ -177,7 +179,7 @@ The two photocells are connected with a logical AND to the chronometer.
 
 Before each passage the SIAC are cleared and turned on with a SIAC ON station.
 
-The jSh Radio gateway is connected to two SRR USB dongle to receive the Sportident time and via serial cable to the chronometer to receive the photocell time. Everything is saved into a csv file.
+The jSh Radio gateway is connected to two SRR USB dongle to receive the Sportident time and via serial cable to the chronometer to receive the photocell time. Everything is saved into a csv file. The computer time is saved, in order to know the latency.
 
 - **Output**: 2-photocell-times.csv
 - **Output**: 2-sportident-times.csv
@@ -203,7 +205,7 @@ The setup has:
 - Chronometer connected at channel 1
 - BS11-BL (punching mode) with send last punch connected to the start gate at channel 2 
 
-The jSh Radio gateway is connected to two SRR dongle to receive the Sportident time and via serial cable to the chronometer to receive the chronometer time. Everything is saved into a csv file.
+The jSh Radio gateway is connected to two SRR dongle to receive the Sportident time and via serial cable to the chronometer to receive the chronometer time. Everything is saved into a csv file. The computer time is saved, in order to know the latency.
 
 - **Output**: 4-chronometer-times.csv
 - **Output**: 4-sportident-times.csv
