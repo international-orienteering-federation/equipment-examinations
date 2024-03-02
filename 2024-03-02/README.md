@@ -190,7 +190,7 @@ All the SIACs are read (with a BSF-7 USB station) to collect the internal info (
 
 The setup has (mounted on the same line):
 - BS11-LA (timing mode) with send last punch
-- 2x photocell mounted at 50cm and 125cm
+- 2x photocell mounted at 90cm and 120cm
 - Photofinish
 
 The two photocells are connected with a logical AND to the chronometer.
