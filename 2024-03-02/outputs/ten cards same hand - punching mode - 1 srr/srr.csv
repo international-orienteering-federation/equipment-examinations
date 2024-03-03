@@ -1,0 +1,12 @@
+#;Lettura;SIID;CN;Giorno;Orario passaggio;Modalità;N.;Conteggio;Radio;Batteria;SI-Card;Modalità beacon;Gate;Informazione RSSI;
+4;02/03/2024 16:27:54;8509788;10;Sa;16:27:54.500;BcFinish;0;1;SrRadioSendLast;OK;OK;PunchingMode;No;;
+2;02/03/2024 16:27:54;8509804;10;Sa;16:27:54.570;BcFinish;0;1;SrRadioSendLast;OK;OK;PunchingMode;No;;
+9;02/03/2024 16:27:55;8509804;10;Sa;16:27:54.570;BcFinish;0;1;SrRadioSendLast;OK;OK;PunchingMode;No;;
+11;02/03/2024 16:27:55;8509850;10;Sa;16:27:54.500;BcFinish;0;1;SrRadioSendLast;OK;OK;PunchingMode;No;;
+7;02/03/2024 16:27:54;8509861;10;Sa;16:27:54.632;BcFinish;0;1;SrRadioSendLast;OK;OK;PunchingMode;No;;
+5;02/03/2024 16:27:54;8509883;10;Sa;16:27:54.500;BcFinish;0;1;SrRadioSendLast;OK;OK;PunchingMode;No;;
+6;02/03/2024 16:27:54;8509907;10;Sa;16:27:54.570;BcFinish;0;1;SrRadioSendLast;OK;OK;PunchingMode;No;;
+10;02/03/2024 16:27:55;8509907;10;Sa;16:27:54.570;BcFinish;0;1;SrRadioSendLast;OK;OK;PunchingMode;No;;
+3;02/03/2024 16:27:54;8509930;10;Sa;16:27:54.570;BcFinish;0;1;SrRadioSendLast;OK;OK;PunchingMode;No;;
+1;02/03/2024 16:27:54;8509945;10;Sa;16:27:54.531;BcFinish;0;1;SrRadioSendLast;OK;OK;PunchingMode;No;;
+8;02/03/2024 16:27:54;8509951;10;Sa;16:27:54.500;BcFinish;0;1;SrRadioSendLast;OK;OK;PunchingMode;No;;

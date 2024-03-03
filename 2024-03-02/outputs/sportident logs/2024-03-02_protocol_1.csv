@@ -1,0 +1,36 @@
+Date;Time;SerialNo;Hardware;ProductionDate;Software;MemorySize;TargetDevice;BatteryDate;Capacity;BattUsage;Voltage;CodeNo;Mode;OpTime;Rtc;Autosend;LegacyProtocol;Sprint_4ms;Card6with192punches;StopIfBackupFull;AirPlusBeaconMode;AirPlusRadioMode;AcousticSignal;OpticalSignal;FlipDisplay;AllowGateMode;Action;
+2024-03-02;15:57:53;305475;BS11 Loop Antenna;2023-06-22;704;128 K;Direct;2023-06-22;4500;1,5 %;4,18;10;BcFinish; 12:00:00;N/A;N/A;N/A;N/A;N/A;N/A;TimingMode;SrRadioSendLast;AcousticSignal;OpticalSignal; -;N/A;ConfigRead
+2024-03-02;15:58:31;305475;BS11 Loop Antenna;2023-06-22;704;128 K;Direct;2023-06-22;4500;1,5 %;4,18;10;BcFinish; 12:00:00;N/A;N/A;N/A;N/A;N/A;N/A;PunchingMode;SrRadioSendLast;AcousticSignal;OpticalSignal; -;N/A;ConfigWritten
+
+Date;Time;SerialNo;Hardware;ProductionDate;Software;MemorySize;TargetDevice;BatteryDate;Capacity;BattUsage;Voltage;CodeNo;Mode;OpTime;Rtc;Autosend;LegacyProtocol;Sprint_4ms;Card6with192punches;StopIfBackupFull;AirPlusBeaconMode;AirPlusRadioMode;AcousticSignal;OpticalSignal;FlipDisplay;AllowGateMode;Action;
+2024-03-02;16:04:22;133233;BSM7 UART1 (USB);2011-02-23;656;128 K;Direct;2017-10-09;2000;24,0 %;3,00;15;Readout; 00:10:00;N/A; -; -;N/A; -; -;N/A;N/A;AcousticSignal;OpticalSignal;N/A;N/A;ConfigRead
+
+Date;Time;SerialNo;Hardware;ProductionDate;Software;SrrChannel;UseModD3;HandshakeMode;TelegramMode;Action;
+2024-03-02;16:04:34;218106450;SRR AP (Dongle);2015-12-07;402;Red;Air+;Autosend;N/A;ConfigRead
+
+Date;Time;SerialNo;Hardware;ProductionDate;Software;SrrChannel;UseModD3;HandshakeMode;TelegramMode;Action;
+2024-03-02;16:26:31;218106450;SRR AP (Dongle);2015-12-07;402;Red;Air+;Autosend;N/A;ConfigRead
+
+Date;Time;SerialNo;Hardware;ProductionDate;Software;MemorySize;TargetDevice;BatteryDate;Capacity;BattUsage;Voltage;CodeNo;Mode;OpTime;Rtc;Autosend;LegacyProtocol;Sprint_4ms;Card6with192punches;StopIfBackupFull;AirPlusBeaconMode;AirPlusRadioMode;AcousticSignal;OpticalSignal;FlipDisplay;AllowGateMode;Action;
+2024-03-02;16:28:46;133233;BSM7 UART1 (USB);2011-02-23;656;128 K;Direct;2017-10-09;2000;24,0 %;3,00;15;Readout; 00:10:00;N/A; -; -;N/A; -; -;N/A;N/A;AcousticSignal;OpticalSignal;N/A;N/A;ConfigRead
+
+Date;Time;SerialNo;Hardware;ProductionDate;Software;MemorySize;TargetDevice;BatteryDate;Capacity;BattUsage;Voltage;CodeNo;Mode;OpTime;Rtc;Autosend;LegacyProtocol;Sprint_4ms;Card6with192punches;StopIfBackupFull;AirPlusBeaconMode;AirPlusRadioMode;AcousticSignal;OpticalSignal;FlipDisplay;AllowGateMode;Action;
+2024-03-02;16:32:10;305475;BS11 Loop Antenna;2023-06-22;704;128 K;Direct;2023-06-22;4500;2,2 %;4,17;10;BcFinish; 12:00:00;N/A;N/A;N/A;N/A;N/A;N/A;PunchingMode;SrRadioSendLast;AcousticSignal;OpticalSignal; -;N/A;ConfigRead
+2024-03-02;16:32:24;305475;BS11 Loop Antenna;2023-06-22;704;128 K;Direct;2023-06-22;4500;2,2 %;4,17;10;BcFinish; 12:00:00;N/A;N/A;N/A;N/A;N/A;N/A;TimingMode;SrRadioSendLast;AcousticSignal;OpticalSignal; -;N/A;ConfigWritten
+
+Date;Time;SerialNo;Hardware;ProductionDate;Software;SrrChannel;UseModD3;HandshakeMode;TelegramMode;Action;
+2024-03-02;16:33:47;218106450;SRR AP (Dongle);2015-12-07;402;Red;Air+;Autosend;N/A;ConfigRead
+2024-03-02;16:33:49;2642;SRR AP (Dongle);2015-12-07;402;Red;Air+;Autosend;N/A;ConfigRead
+
+Date;Time;SerialNo;Hardware;ProductionDate;Software;SrrChannel;UseModD3;HandshakeMode;TelegramMode;Action;
+2024-03-02;16:34:07;218106950;SRR AP (Dongle);2017-04-18;450;Blue;Air+;Autosend;SendACK;ConfigRead
+2024-03-02;16:34:16;3142;SRR AP (Dongle);2017-04-18;450;Blue;Air+;Autosend;SendACK;ConfigRead
+2024-03-02;16:34:20;2642;SRR AP (Dongle);2015-12-07;402;Red;Air+;Autosend;N/A;ConfigRead
+
+Date;Time;SerialNo;Hardware;ProductionDate;Software;MemorySize;TargetDevice;BatteryDate;Capacity;BattUsage;Voltage;CodeNo;Mode;OpTime;Rtc;Autosend;LegacyProtocol;Sprint_4ms;Card6with192punches;StopIfBackupFull;AirPlusBeaconMode;AirPlusRadioMode;AcousticSignal;OpticalSignal;FlipDisplay;AllowGateMode;Action;
+2024-03-02;16:36:35;133233;BSM7 UART1 (USB);2011-02-23;656;128 K;Direct;2017-10-09;2000;24,0 %;3,00;15;Readout; 00:10:00;N/A; -; -;N/A; -; -;N/A;N/A;AcousticSignal;OpticalSignal;N/A;N/A;ConfigRead
+
+Date;Time;SerialNo;Hardware;ProductionDate;Software;MemorySize;TargetDevice;BatteryDate;Capacity;BattUsage;Voltage;CodeNo;Mode;OpTime;Rtc;Autosend;LegacyProtocol;Sprint_4ms;Card6with192punches;StopIfBackupFull;AirPlusBeaconMode;AirPlusRadioMode;AcousticSignal;OpticalSignal;FlipDisplay;AllowGateMode;Action;
+2024-03-02;16:53:52;300029;BS11 Large;2012-04-26;704;128 K;Direct;2012-04-26;4500;0,0 %;4,13;3;BcStart; 12:00:00;N/A;N/A;N/A;N/A;N/A;N/A;PunchingMode;SrRadioSendLast;AcousticSignal;OpticalSignal; -;N/A;ConfigRead
+2024-03-02;16:54:09;300029;BS11 Large;2012-04-26;704;128 K;Direct;2012-04-26;4500;0,0 %;4,13;3;BcStart; 12:00:00;N/A;N/A;N/A;N/A;N/A;N/A;PunchingMode;SrRadioSendLast;AcousticSignal;OpticalSignal; -;N/A;ConfigWritten
+2024-03-02;16:54:22;300029;BS11 Large;2012-04-26;704;128 K;Direct;2012-04-26;4500;0,0 %;4,13;3;BcStart; 12:00:00;N/A;N/A;N/A;N/A;N/A;N/A;PunchingMode;SrRadioSendLast;AcousticSignal;OpticalSignal; -;N/A;ConfigRead
