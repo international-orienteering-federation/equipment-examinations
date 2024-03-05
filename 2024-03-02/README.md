@@ -21,7 +21,6 @@ Thanks for the equipment and the support to [FICr Vicenza](https://www.cronovice
   - [Hardware](#hardware)
     - [Sportident BS11-BL modified for the start gate](#sportident-bs11-bl-modified-for-the-start-gate)
     - [Resolution](#resolution)
-  - [Software](#software)
   - [Protocol](#protocol)
     - [0 - Setup](#0---setup)
       - [Clock drift](#clock-drift)
@@ -99,28 +98,33 @@ Timing mode should guarantee an higher accuracy, however some organizers prefer 
 
 - Alge-Timing STSnM2S
   - S/N: // TODO 
-- // TODO (photocell)
-  - S/N: // TODO 
-  - S/N: // TODO 
+- Microgate Polifemo (photocell)
+  - S/N: 002532 
+  - S/N: 001935 
 - Microgate REI Pro
-  - S/N: // TODO 
+  - S/N: 000276
+  - version: 1.14.8 (09/11/2023)
 - Finish Lynx
-  - S/N: // TODO 
+  - S/N: 10176
+  - version: 12.20-e (22/12/2022)
 - Sportident BSF-8:
-  - CLEAR S/N: // TODO
-  - SIAC ON S/N: // TODO
+  - CLEAR S/N: 158909
+  - CHECK S/N: 158173
 - Sportident BSF-7 USB:
-  - S/N: // TODO
+  - S/N: 133233
+  - firmware: 656
 - Sportident BS11-LA (ground antenna):
-  - S/N: // TODO
-  - Battery date:
+  - S/N: 305475
+  - Battery date: 22/06/2023 (4.17V)
 - Sportident Active Card (SIAC)
 - Sportident SRR Dongle
-  - (channel blue) S/N: // TODO 
-  - (channel red) S/N: // TODO 
+  - (channel blue) S/N: 218106950
+  - (channel red) S/N: 218106450
 - Sportident BS11-BL (modified)
   - S/N: 300029
-  - Battery date: // TODO
+  - Battery date: 26/04/2012 (4.13V)
+- Sportident Config+
+  - version: 2.11.0
 
 ### Sportident BS11-BL modified for the start gate
 
@@ -139,19 +143,6 @@ Without the antenna the BS11-BL cannot send any signal to the SIAC. As soon the 
 - Sportident times are saved at 1/256 of second.
 - Photocell times are saved at 1/100 of second.
 - Photofinish times are saved at 1/1000 of second.
-
-## Software
-
-- Microgate
-  - version: // TODO
-  - configuration: // TODO
-- Finish Lynx
-  - version: // TODO
-- jSh Radio controller
-  - version: 1.75 (2023-10-14)
-  - on: Windows 11 x64 // TODO
-- Sportident Config+ 
-  - version: 2.11.0
 
 ## Protocol
 
