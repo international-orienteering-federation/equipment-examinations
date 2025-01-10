@@ -117,11 +117,11 @@ Distribution chart
 
 ### 3. Precision and accuracy of a modified BS11-BL connected to a start gate
 
-It has not been possible to do the required experiment. The start gates provided were not able to disconnect completelly the BS11-BL antenna and the starting competitor was punching the start before the gate open.
+The required test could not be carried out. The start gates provided were not able to completely disconnect the BS11-BL antenna and the starting competitor punched the start before the gate opened.
 
 ### Other considerations
 
-In the Sportident system the times recorded with the SRR protocols (used for live results and tv production) have been the same of the times read out from the cards.
+In the Sportident system, the times recorded with the SRR protocols (used for live results and TV production) were the same as the times read from the cards.
 
 ## Going deeper
 
